@@ -6,7 +6,7 @@
    CUSTOM PROPERTIES
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --kinoFooterText: "Kinorama v2.1.7";
+  --kinoFooterText: "Kinorama v2.1.8";
   color-scheme: dark;
 
   /* ── Gradient points (overridden by Theme → black palette) ── */
@@ -235,7 +235,7 @@ body {
    FOOTER & SELECTION
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .dashboardFooter {
-  font-family: "Noto Sans", serif;
+  font-family: "Noto Sans", sans-serif;
   transition: transform 50ms;
 }
 
@@ -1677,12 +1677,12 @@ html,
 
 ::-moz-progress-bar {
   background: var(--uiAccentColor) !important;
-  border-radius: var(--smallRadius) inherit var(--smallRadius) 0;
+  border-radius: 0 var(--smallRadius) var(--smallRadius) 0;
 }
 
 ::-webkit-progress-value {
   background: var(--uiAccentColor) !important;
-  border-radius: var(--smallRadius) inherit var(--smallRadius) 0;
+  border-radius: 0 var(--smallRadius) var(--smallRadius) 0;
 }
 
 progress,

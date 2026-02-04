@@ -1,4 +1,4 @@
-/* Kinorama - Inspired by ElegantFin Theme v25.12.31 by lscambo13 */
+/* Kinorama - Inspired by ElegantFin by lscambo13 */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
@@ -6,7 +6,7 @@
    CUSTOM PROPERTIES
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --elegantFinFooterText: "Kinorama v2.1.3";
+  --kinoFooterText: "Kinorama v2.1.4";
   color-scheme: dark;
 
   /* ── Gradient points (overridden by Theme → black palette) ── */
@@ -240,7 +240,7 @@ body {
 
 #myPreferencesMenuPage > div:after,
 .dashboardFooter::after {
-  content: var(--elegantFinFooterText);
+  content: var(--kinoFooterText);
   font-size: 0.8em;
   color: var(--borderColor);
   display: inline-grid;

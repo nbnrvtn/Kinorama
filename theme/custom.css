@@ -6,7 +6,7 @@
    CUSTOM PROPERTIES
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --elegantFinFooterText: "Kinorama v2.1.1";
+  --elegantFinFooterText: "Kinorama v2.1.3";
   color-scheme: dark;
 
   /* ── Gradient points (overridden by Theme → black palette) ── */

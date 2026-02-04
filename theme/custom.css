@@ -6,7 +6,7 @@
    CUSTOM PROPERTIES
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --kinoFooterText: "Kinorama v2.1.6";
+  --kinoFooterText: "Kinorama v2.1.7";
   color-scheme: dark;
 
   /* ── Gradient points (overridden by Theme → black palette) ── */
@@ -1963,11 +1963,17 @@ progress + span {
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    OVERVIEW / DESCRIPTION
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* Always show full overview (no clamp, all devices) */
 .detail-clamp-text {
   text-align: start;
   color: var(--dimTextColor);
   margin-top: 0;
   margin-bottom: 0;
+  display: block !important;
+  overflow: visible !important;
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+  -webkit-box-orient: unset !important;
 }
 
 .detail-clamp-text p {
@@ -1975,54 +1981,10 @@ progress + span {
   margin-bottom: 0.25em;
 }
 
-.layout-desktop .detail-clamp-text {
-  -webkit-line-clamp: 2;
-}
-
-.layout-mobile .detail-clamp-text {
-  -webkit-line-clamp: 4;
-}
-
-.layout-tv .detail-clamp-text {
-  -webkit-line-clamp: 10;
-  transition: none;
-}
-
-/* ── expand/collapse toggle ── */
+/* Hide expand button and its controls (overview always expanded) */
+.overview-controls,
 .overview-expand.emby-button {
-  padding: 0;
-  margin-top: 1.4em;
-  margin-bottom: 1.4em;
-  color: transparent;
-}
-
-.overview-expand.emby-button:after {
-  content: "\e313";
-  font-family: "Material Icons";
-  background: var(--selectorBackgroundColor);
-  border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
-  align-content: center;
-  line-height: 1.6ch;
-  transition: transform 0.5s;
-  color: var(--textColor);
-}
-
-.overview.detail-clamp-text ~ .overview-controls .overview-expand:after {
-  transform: rotateZ(0deg);
-}
-
-.overview:not(.detail-clamp-text) ~ .overview-controls .overview-expand:after {
-  transform: rotateZ(180deg);
-}
-
-.overview-controls {
-  height: 0;
-}
-
-.detailSectionContent:has(.itemExternalLinks.hide) .overview-controls {
-  height: 1em;
+  display: none !important;
 }
 
 #seriesAirTime {
